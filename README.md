@@ -1,1 +1,1 @@
-### a django practice. practice of 'django-by-example'
+### a practice of 'django-by-example'
