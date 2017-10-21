@@ -12,12 +12,14 @@
     {% endblock %}
   </div>
 
-{#  左侧边栏#}
+{# 边栏#}
   <div id="sidebar">
 
 {#      展示数量#}
       <h2>My blog</h2>
       <p>This is my blog. I've writtern {% total_posts %} posts so far.</p>
+
+      <p><a href="{% url "blog:post_feed" %}">Subscribe to my RSS feed</a></p>
 
 {#      最新的帖子#}
       <h3>Latest posts</h3>
