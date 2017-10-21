@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -121,13 +123,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  #email后端
 EMAIL_HOST = 'smtp.qq.com'
-EMAIL_HOST_USER = 'xxx@qq.com'
-EMAIL_HOST_PASSWORD = '***'
-EMAIL_PORT = 465
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'xxxxx@qq.com'       #发送邮件的邮箱地址
+EMAIL_HOST_PASSWORD = '*****'    #发送邮件的邮箱密码
+EMAIL_PORT = 465                 #发件箱的SMTP服务器端口
+EMAIL_USE_TLS = False            #是否使用TLS安全传输协议
+EMAIL_USE_SSL = True             #是否使用SSL加密，qq企业邮箱要求使用
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
